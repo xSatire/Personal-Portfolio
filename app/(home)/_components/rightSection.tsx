@@ -37,9 +37,6 @@ export default function RightSection({ scrollRef }: RightSectionProps) {
     <motion.div
       ref={scrollRef}
       className="h-screen w-1/2 overflow-y-auto bg-gray-100"
-      initial={{ x: "100%" }}
-      animate={{ x: "0%" }}
-      transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
     >
       {sections.map((section, index) => (
         <div

@@ -5,11 +5,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 https://coolors.co/palette/ccd5ae-e9edc9-fefae0-faedcd-d4a373
 https://coolors.co/26547c-ef476f-ffd166-06d6a0-fcfcfc
 
-main-100:#CCD5AE
-main-200:#E9EDC9
-main-300:#FEFAE0
-main-400:#FAEDCD
-main-500:#D4A373
+main-100:#606c38
+main-200:#283618
+main-300:#fefae0
+main-400:#dda15e
+main-500:#bc6c25
+text-100:##2e304b
 
 ## Getting Started
 
