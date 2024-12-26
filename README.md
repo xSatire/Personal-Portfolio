@@ -10,7 +10,7 @@ main-200:#283618
 main-300:#fefae0
 main-400:#dda15e
 main-500:#bc6c25
-text-100:##2e304b
+text-100:#2e304b
 
 ## Getting Started
 

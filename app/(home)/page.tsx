@@ -22,7 +22,7 @@ export default function Portfolio() {
   return (
     <div className="flex h-screen w-screen overflow-hidden">
       <motion.div
-        className="h-screen w-1/2 bg-gray-900 flex flex-col overflow-y-auto z-50 fixed"
+        className="h-screen w-1/2 bg-main-600 flex flex-col overflow-y-auto z-50 fixed"
         initial={{ width: "100%" }}
         animate={{ width: "0%" }}
         transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}

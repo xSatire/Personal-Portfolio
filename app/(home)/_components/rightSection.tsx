@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Profile from "./profile";
+import About from "./about";
+import Review from "./review";
 
 interface RightSectionProps {
   scrollRef: React.RefObject<HTMLDivElement>;
@@ -36,19 +39,11 @@ export default function RightSection({ scrollRef }: RightSectionProps) {
   return (
     <motion.div
       ref={scrollRef}
-      className="h-screen w-1/2 overflow-y-auto bg-gray-100"
+      className="h-screen w-1/2 overflow-y-auto bg-main-300"
     >
-      {sections.map((section, index) => (
-        <div
-          key={index}
-          className="section h-screen flex flex-col justify-center p-12 bg-white sticky top-0"
-        >
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">
-            {section.title}
-          </h2>
-          <p className="text-gray-600">{section.content}</p>
-        </div>
-      ))}
+      <About />
+      <Profile />
+      <Review />
     </motion.div>
   );
 }
