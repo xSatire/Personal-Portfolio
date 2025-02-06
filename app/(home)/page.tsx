@@ -20,15 +20,18 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden">
+    <div className="lg:flex h-screen w-screen overflow-hidden">
       <motion.div
-        className="h-screen w-1/2 bg-main-600 flex flex-col overflow-y-auto z-50 fixed"
+        className="hidden lg:h-screen w-1/2 bg-main-600 lg:flex flex-col overflow-y-auto z-50 fixed"
         initial={{ width: "100%" }}
         animate={{ width: "0%" }}
         transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
       />
       <LeftSection scrollRef={leftRef} animationComplete={animationComplete} />
-      <RightSection scrollRef={rightRef} />
+      <RightSection
+        scrollRef={rightRef}
+        animationComplete={animationComplete}
+      />
     </div>
   );
 }

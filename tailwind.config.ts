@@ -29,16 +29,17 @@ const config = {
           foreground: "hsl(var(--primary-foreground))",
         },
         main: {
-          100: "#ccd5ae",
-          200: "#283618",
-          300: "#fefae0",
-          400: "#faedcd",
-          500: "#d4a373",
-          600: "#bc6c25",
+          "100": "#ccd5ae",
+          "200": "#283618",
+          "300": "#fefae0",
+          "400": "#faedcd",
+          "500": "#d4a373",
+          "600": "#bc6c25",
+          "700": "#ededda",
         },
         textMain: {
-          100: "#2e304b",
-          200: "#020817",
+          "100": "#2e304b",
+          "200": "#020817",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -64,6 +65,13 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -71,18 +79,41 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "float-in": {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        slideLeft: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        slideRight: {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float-in": "float-in 0.3s ease-out",
+        "slide-left": "slideLeft 0.3s ease-out",
+        "slide-right": "slideRight 0.3s ease-out",
       },
     },
   },

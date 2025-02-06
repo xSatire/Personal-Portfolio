@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 interface LeftSectionProps {
   animationComplete: boolean;
@@ -38,7 +39,7 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
       transition: {
         duration: 0.8,
         ease: [0.215, 0.61, 0.355, 1], // Easing function for a smooth, slightly bouncy effect
-        delay: 5, // Start text animation slightly before curtain animation ends
+        delay: 2.5, // Start text animation slightly before curtain animation ends
       },
     },
   };
@@ -65,7 +66,7 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
       {text.split(" ").map((word, index) => (
         <motion.span
           key={index}
-          className="inline-block pr-2"
+          className="inline-block pr-2 mb-8"
           variants={wordVariants}
         >
           {`${word} `}
@@ -74,55 +75,68 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
     </motion.span>
   );
 
+  const handleButtonClick = () => {
+    const element = document.getElementById("contactMe");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.div
-      className="sticky top-0 pb-12"
+      className="sticky top-0 pb-12 h-full"
       variants={containerVariants}
       initial="initial"
       animate={animationComplete ? "animate" : "initial"}
     >
-      <Image
-        src="/placeholder.svg?height=150&width=150"
-        width={150}
-        height={150}
-        alt="Profile"
-        className="rounded-full mb-6"
-      />
-      <h1 className="text-4xl font-bold text-main-300 mb-4">
-        <AnimatedText text="Welcome to My Portfolio" className="block" />
-      </h1>
-      <motion.div
-        variants={textVariants}
-        initial="initial"
-        animate={animationComplete ? "animate" : "initial"}
-      >
-        <h1 className="text-4xl font-bold mb-2 text-main-400">John Doe</h1>
-        <h2 className="text-xl text-main-400 mb-6">Full Stack Developer</h2>
-        <p className="text-main-300 mb-6">
-          Passionate about creating beautiful and functional web applications.
-          With 5 years of experience in both front-end and back-end development.
-        </p>
-        <div className="flex space-x-4">
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors"
+      <div className="flex flex-col items-center w-full h-full justify-center">
+        <h1 className="text-5xl font-semibold leading-7 text-main-300 mb-4">
+          <AnimatedText
+            text="Hi! I'm Darryl, a freelance software engineer."
+            className="block"
+          />
+        </h1>
+        <motion.div
+          variants={textVariants}
+          initial="initial"
+          animate={animationComplete ? "animate" : "initial"}
+        >
+          <p className="text-main-300 mb-6">
+            From automating mundane tasks to building full-scale business
+            applications, I help individuals and businesses bring their ideas to
+            life!
+          </p>
+          <button
+            onClick={handleButtonClick}
+            className="py-4 px-6 md:px-8 font-semibold rounded-3xl text-main-300 bg-main-600 border-main-300 border-2 hover:bg-main-300 hover:text-textMain-100 transition-all ease-in-out"
           >
-            <Github size={24} />
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <Linkedin size={24} />
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <Mail size={24} />
-          </a>
-        </div>
-      </motion.div>
+            Let&apos;s Work Together!
+          </button>
+          <div className="flex space-x-4 mt-6">
+            <a
+              href="https://github.com/xsatire"
+              className="text-slate-100 hover:text-white transition-colors"
+              target="_blank"
+            >
+              <Github size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/darryl-yang-73877b348/"
+              className="text-slate-100 hover:text-white transition-colors"
+              target="_blank"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a
+              href="#"
+              className="text-slate-100 hover:text-white transition-colors"
+              target="_blank"
+            >
+              <Mail size={24} />
+            </a>
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };
