@@ -27,7 +27,7 @@ export const GreetingButton = () => {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[560px] max-h-[90vh] flex flex-col bg-slate-100">
+      <DialogContent className="max-w-[80vw] max-h-[90vh] flex flex-col bg-slate-100">
         <DialogHeader>
           <DialogTitle>Just want to chat</DialogTitle>
           <DialogDescription>

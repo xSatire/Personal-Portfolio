@@ -106,7 +106,7 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
           initial="initial"
           animate={animationComplete ? "animate" : "initial"}
         >
-          <p className="text-main-300 mb-8 text-sm md:text-md">
+          <p className="text-main-300 mb-8 text-sm md:text-base">
             From automating mundane tasks to building full-scale business
             applications, I help individuals and businesses bring their ideas to
             life!
