@@ -60,22 +60,24 @@ export default function Review() {
         <div className="mb-6 relative">
           <div
             key={currentReview}
-            className={`w-full h-[30rem] md:h-80 transition-all duration-300 ease-in-out ${
+            className={`w-full h-[33rem] md:h-80 transition-all duration-300 ease-in-out ${
               direction === "left"
                 ? "animate-slide-left"
                 : "animate-slide-right"
             }`}
           >
-            <p className="text-textMain-200 font-semibold mb-6 md:mb-8 text-2xl md:text-3xl leading-8">
-              {reviews[currentReview].content}
-            </p>
-            <div className="flex flex-col justify-start items-start">
-              <span className="text-textMain-200 font-semibold text-lg">
-                {reviews[currentReview].author}
-              </span>
-              <span className="text-textMain-100 font-light text-md">
-                {reviews[currentReview].title}
-              </span>
+            <div className="h-full w-full flex flex-col justify-end pb-2">
+              <p className="text-textMain-200 font-semibold mb-6 md:mb-8 text-2xl tracking-tight md:text-3xl leading-8">
+                &quot;{reviews[currentReview].content}&quot;
+              </p>
+              <div className="flex flex-col justify-start items-start">
+                <span className="text-textMain-200 font-semibold text-lg">
+                  {reviews[currentReview].author}
+                </span>
+                <span className="text-textMain-100 font-light text-md">
+                  {reviews[currentReview].title}
+                </span>
+              </div>
             </div>
           </div>
         </div>

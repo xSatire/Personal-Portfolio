@@ -66,7 +66,7 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
       {text.split(" ").map((word, index) => (
         <motion.span
           key={index}
-          className="inline-block pr-2 mb-8"
+          className="inline-block pr-2 mb-4"
           variants={wordVariants}
         >
           {`${word} `}
@@ -95,9 +95,9 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
       animate={animationComplete ? "animate" : "initial"}
     >
       <div className="flex flex-col items-center w-full h-full justify-center">
-        <h1 className="text-5xl font-semibold leading-7 text-main-300 mb-4">
+        <h1 className="text-5xl font-semibold leading-7 text-main-300 mb-8">
           <AnimatedText
-            text="Hi! I'm Darryl, a freelance software engineer."
+            text="Hi! I'm Darryl, A Freelance Software Engineer"
             className="block"
           />
         </h1>
@@ -106,14 +106,14 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
           initial="initial"
           animate={animationComplete ? "animate" : "initial"}
         >
-          <p className="text-main-300 mb-6">
+          <p className="text-main-300 mb-8 text-sm md:text-md">
             From automating mundane tasks to building full-scale business
             applications, I help individuals and businesses bring their ideas to
             life!
           </p>
           <button
             onClick={handleButtonClick}
-            className="py-4 px-6 md:px-8 font-semibold rounded-3xl text-main-300 bg-main-600 border-main-300 border-2 hover:bg-main-300 hover:text-textMain-100 transition-all ease-in-out"
+            className="py-3 md:py-4 px-6 md:px-8 font-semibold rounded-3xl text-main-300 bg-main-600 border-main-300 border-2 hover:bg-main-300 hover:text-textMain-100 transition-all ease-in-out"
           >
             Let&apos;s Work Together!
           </button>
@@ -139,7 +139,7 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
               <Send size={24} />
             </div>
           </div>
-          <div className="mt-3 text-slate-100 tracking-tighter font-semibold hover:underline">
+          <div className="text-xs md:text-sm mt-3 text-slate-100 tracking-tighter hover:underline">
             <a href="/files/resume.pdf" target="_blank">
               Check Out My Resume
             </a>

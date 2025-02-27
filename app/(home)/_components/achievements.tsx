@@ -3,7 +3,7 @@ import CompanyCard from "./misc/achievementCard";
 
 const Achievements = () => {
   return (
-    <div className="min-h-screen bg-main-300 w-full grid grid-cols-2 sticky top-0 gap-x-1 gap-y-1">
+    <div className="min-h-screen bg-main-300 w-full grid grid-cols-2 sticky top-0 gap-x-1 gap-y-1 pb-20">
       <CompanyCard
         hoverTitle="SBS Hackathon"
         companyName="SBS"

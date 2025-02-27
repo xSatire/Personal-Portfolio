@@ -32,7 +32,9 @@ export default function CompanyCard({
         }`}
         aria-hidden={isHovered}
       >
-        <span className="text-black text-xl font-bold">{companyName}</span>
+        <span className="text-black text-lg md:text-xl font-bold text-center">
+          {companyName}
+        </span>
       </div>
       <div
         className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ease-in-out ${
@@ -40,11 +42,11 @@ export default function CompanyCard({
         }`}
         aria-hidden={!isHovered}
       >
-        <span className="font-bold animate-float-in flex flex-col justify-start items-start space-y-3 w-full h-full px-6 py-8 lg:px-10 lg:py-12">
-          <div className="text-lg font-semibold text-textMain-200">
+        <span className="font-bold animate-float-in flex flex-col justify-center items-center space-y-3 w-full h-full px-6 py-8 lg:px-10 lg:py-12">
+          <div className="md:text-lg font-semibold text-textMain-200">
             {hoverTitle}
           </div>
-          <div className="text-textMain-100 font-light tracking-tight">
+          <div className="text-sm md:text-base text-textMain-100 font-light tracking-tight">
             {hoverText}
           </div>
         </span>
