@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
@@ -82,6 +82,11 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
     }
   };
 
+  const handleEmailClick = () => {
+    window.location.href =
+      "mailto:darrylyannghm@gmail.com?subject=Project Inquiry";
+  };
+
   return (
     <motion.div
       className="sticky top-0 pb-12 h-full"
@@ -112,7 +117,7 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
           >
             Let&apos;s Work Together!
           </button>
-          <div className="flex space-x-4 mt-6">
+          <div className="flex space-x-4 mt-6 items-center">
             <a
               href="https://github.com/xsatire"
               className="text-slate-100 hover:text-white transition-colors"
@@ -121,18 +126,22 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
               <Github size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/darryl-yang-73877b348/"
+              href="https://www.linkedin.com/in/yang-hanming-darryl-73877b348/"
               className="text-slate-100 hover:text-white transition-colors"
               target="_blank"
             >
               <Linkedin size={24} />
             </a>
-            <a
-              href="#"
-              className="text-slate-100 hover:text-white transition-colors"
-              target="_blank"
+            <div
+              onClick={handleEmailClick}
+              className="text-slate-100 hover:text-white transition-colors hover:cursor-pointer"
             >
-              <Mail size={24} />
+              <Send size={24} />
+            </div>
+          </div>
+          <div className="mt-3 text-slate-100 tracking-tighter font-semibold hover:underline">
+            <a href="/files/resume.pdf" target="_blank">
+              Check Out My Resume
             </a>
           </div>
         </motion.div>

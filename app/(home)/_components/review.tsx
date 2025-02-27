@@ -27,8 +27,8 @@ const reviews: Review[] = [
   },
   {
     id: 3,
-    author: "Arthur Law",
-    title: "Commander Special Operation Command, Singapore Police Force",
+    author: "Jackson Tan",
+    title: "Head of Development, RSA",
     content:
       "Working with Darryl over the past two years has been a pleasure. He developed a fully autonomous program that streamlined our monthly tasks and consistently went above and beyond to ensure smooth operations.",
   },

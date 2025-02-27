@@ -7,7 +7,7 @@ const Achievements = () => {
       <CompanyCard
         hoverTitle="SBS Hackathon"
         companyName="SBS"
-        hoverText="Fully automated lighting solution using NextJS & AuthV5. Achieved 2nd Place"
+        hoverText="Fully automated lighting solution using NextJS & AuthV5. Achieved 1st Place"
       />
       <CompanyCard
         hoverTitle="Hack4Good"
