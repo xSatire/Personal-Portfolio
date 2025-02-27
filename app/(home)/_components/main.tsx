@@ -66,7 +66,7 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
       {text.split(" ").map((word, index) => (
         <motion.span
           key={index}
-          className="inline-block pr-2 mb-4"
+          className="inline-block pr-2 mb-5"
           variants={wordVariants}
         >
           {`${word} `}
