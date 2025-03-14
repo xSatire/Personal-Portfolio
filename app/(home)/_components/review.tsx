@@ -60,7 +60,7 @@ export default function Review() {
         <div className="mb-6 relative">
           <div
             key={currentReview}
-            className={`w-full h-[33rem] md:h-80 transition-all duration-300 ease-in-out ${
+            className={`w-full h-[33rem] lg:h-100 xl:h-80 transition-all duration-300 ease-in-out ${
               direction === "left"
                 ? "animate-slide-left"
                 : "animate-slide-right"

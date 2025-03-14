@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MousePointerClick, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
@@ -139,9 +139,17 @@ const Main = ({ animationComplete }: LeftSectionProps) => {
               <Send size={24} />
             </div>
           </div>
-          <div className="text-xs md:text-sm mt-3 text-slate-100 tracking-tighter hover:underline">
-            <a href="/files/resume.pdf" target="_blank">
-              Check Out My Resume
+          <div className="text-xs md:text-sm mt-3 text-slate-100 tracking-tighter hover:underline max-w-[250px]">
+            <a
+              href="/files/resume.pdf"
+              target="_blank"
+              className="flex items-center gap-x-1"
+            >
+              <MousePointerClick
+                size={16}
+                className="group-hover:fill-main-300 "
+              />
+              <p>Click Here For My Resume</p>
             </a>
           </div>
         </motion.div>
