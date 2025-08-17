@@ -13,8 +13,8 @@ interface Review {
 const reviews: Review[] = [
   {
     id: 1,
-    author: "Its21Master",
-    title: "Music Producer, CEO of Musixtica",
+    author: "Jayson Wong",
+    title: "Aster-Tuition, Chief Marketing Officer",
     content:
       "Darryl is an invaluable asset to our company. Having collaborated on multiple projects, I have seen firsthand his commitment to delivering consistently high-quality work.",
   },
@@ -27,8 +27,8 @@ const reviews: Review[] = [
   },
   {
     id: 3,
-    author: "Jackson Tan",
-    title: "Head of Development, RSA",
+    author: "Arthur Law",
+    title: "Singapore Police Force, Commanding Officer",
     content:
       "Working with Darryl over the past two years has been a pleasure. He developed a fully autonomous program that streamlined our monthly tasks and consistently went above and beyond to ensure smooth operations.",
   },
